@@ -1,0 +1,15 @@
+<template>
+    <!--
+    <p>{mediaSrc}</p>
+    <p>{error}</p>
+    <p>{mp3path}</p>
+    <template if:true={myMp3}>
+        <lightning-icon title = "Playing music" icon-name="action:announcement"></lightning-icon>
+    </template>-->
+    <template if:false={myMp3}>
+        <lightning-icon
+            title="No sound defined"
+            icon-name="action:close"
+        ></lightning-icon>
+    </template>
+</template>

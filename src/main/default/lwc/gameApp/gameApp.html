@@ -51,6 +51,7 @@
                 <template if:true={currentQuestion}>
                     <!-- Registration -->
                     <template if:true={isRegistrationPhase}>
+                        <c-play-sound mp3path="registration"></c-play-sound>
                         <div class="slds-grid slds-gutters">
                             <div class="slds-col slds-size_1-of-2">
                                 <c-registration
@@ -73,6 +74,7 @@
 
                     <!-- Question -->
                     <template if:true={isQuestionPhase}>
+                        <c-play-sound mp3path="question"></c-play-sound>
                         <c-progress-bar
                             duration="12"
                             ontimeout={handleNextPhaseClick}
@@ -84,6 +86,7 @@
 
                     <!-- Question results -->
                     <template if:true={isQuestionResultsPhase}>
+                        <c-play-sound mp3path="timesup"></c-play-sound>
                         <h1 class="answer-label">{correctAnswerLabel}</h1>
                         <div class="slds-grid slds-gutters">
                             <div class="slds-col slds-size_1-of-2">
@@ -99,6 +102,7 @@
 
                     <!-- Game results -->
                     <template if:true={isGameResultsPhase}>
+                        <c-play-sound mp3path="leaderboard"></c-play-sound>
                         <div class="slds-grid slds-gutters">
                             <div class="slds-col slds-size_1-of-2">
                                 <c-winner></c-winner>
